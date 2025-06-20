@@ -36,6 +36,7 @@ uploadTestFile(fileUploadTestData)
   And("""the user clicks submit button""") { () =>
     scrollSubmit()
     clickSubmit()
+
   }
 
   Then("""forms should be submitted""") { () =>

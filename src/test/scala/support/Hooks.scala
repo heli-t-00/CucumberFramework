@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.{ChromeDriver, ChromeOptions}
 class Hooks extends ScalaDsl with EN {
 
   val options = new ChromeOptions()
-  options.addArguments("--headless=new")
+  options.addArguments("--headless=new") // COMMENT OUT - to see the test run
 
   Before {
     println("Launching browser before scenario...")
@@ -16,7 +16,10 @@ class Hooks extends ScalaDsl with EN {
   }
 
   After {
+
     println("Closing browser after scenario...")
-    DriverManager.driver.quit()
+
+    DriverManager.driver.quit() // COMMENT OUT - to see the test results
+
   }
 }
