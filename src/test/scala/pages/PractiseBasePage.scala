@@ -2,6 +2,7 @@ package pages
 
 import org.openqa.selenium.support.ui.Select
 import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
+import pages.PractiseFormPage.driver
 import support.DriverManager
 import utils.ConfigReader
 
@@ -51,8 +52,5 @@ trait PractiseBasePage {
 
   }
 
-  def uploadFile (selector: By, text: String): Unit = {
-    val upload: WebElement = driver.findElement(selector)
 
-  }
 }

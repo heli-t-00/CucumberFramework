@@ -12,7 +12,7 @@ object PractiseFormLocators {
   val DateField: By = By.id("datepicker")
   val profCheckbox: By = By.id("profession-0")
   val continentDrop: By = By.id("continents")
-  val fileUpload: By = By.cssSelector("input[id='file-upload-button']")
+  val fileUpload: By = By.xpath("//*[@id='photo']")
   val Submit: By = By.cssSelector("button[id='submit']")
   val cookiesAcceptLocator: By = By.id("ez-accept-necessary")
 

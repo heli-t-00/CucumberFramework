@@ -1,8 +1,9 @@
 package stepdefs
 
 import io.cucumber.scala.{EN, ScalaDsl}
-import pages.PractiseFormPage.{browserLaunch, clickCookies, clickSubmit, experience, gender, inputDate, inputFirstName, inputLastName, scrollGender, selectContinent}
-import testdata.PractiseData.{continentText, dateText, firstnameText, lastnameText}
+import locators.PractiseFormLocators.fileUpload
+import pages.PractiseFormPage.{browserLaunch, clickCookies, clickSubmit, experience, fileUploadInput, gender, inputDate, inputFirstName, inputLastName, scrollGender, scrollSubmit, selectContinent}
+import testdata.PractiseData.{continentText, dateText, fileUploadTestData, firstnameText, lastnameText}
 
 class PractiseFormSteps extends ScalaDsl with EN {
 
@@ -29,14 +30,17 @@ class PractiseFormSteps extends ScalaDsl with EN {
 
   }
   And("""the user uploads file""") { () =>
+fileUploadInput(fileUploadTestData)
 
   }
+
   And("""the user clicks submit button""") { () =>
+    scrollSubmit()
     clickSubmit()
   }
 
   Then("""forms should be submitted""") { () =>
-
+println("Test is COMPLETED")
   }
 
 }
