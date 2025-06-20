@@ -2,7 +2,7 @@ package pages
 
 import org.openqa.selenium.support.ui.Select
 import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
-import pages.PractiseFormPage.driver
+
 import support.DriverManager
 import utils.ConfigReader
 
@@ -52,5 +52,9 @@ trait PractiseBasePage {
 
   }
 
+  def uploadFile(filePath: String) : Unit ={
+    driver.findElement(By.id("photo")).sendKeys(filePath)
+
+  }
 
 }

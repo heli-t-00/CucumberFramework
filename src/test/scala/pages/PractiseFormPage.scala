@@ -3,6 +3,7 @@ package pages
 import locators.PractiseFormLocators.{DateField, ExperienceButton, Firstname, GenderButton, Lastname, Submit, continentDrop, cookiesAcceptLocator, fileUpload}
 import org.openqa.selenium.By
 import pages.LoginPage.clickOn
+import testdata.PractiseData.fileUploadTestData
 
 import java.sql.Date
 
@@ -47,9 +48,13 @@ def scrollGender(): Unit={
   }
 
   // Upload File
-  def fileUploadInput(text: String): Unit = {
-    inputText(fileUpload, text)
+//  def fileUploadInput(text: String): Unit = {
+//    inputText(fileUpload, text)
+//
+//  }
 
+  def uploadTestFile(text: String): Unit ={
+    uploadFile(fileUploadTestData)
   }
 
   def scrollSubmit(): Unit ={
