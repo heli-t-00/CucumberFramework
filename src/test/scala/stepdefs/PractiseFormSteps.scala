@@ -1,8 +1,9 @@
 package stepdefs
 
 import io.cucumber.scala.{EN, ScalaDsl}
-import pages.PractiseFormPage.{browserLaunch, clickCookies, clickSubmit, experience, gender, inputDate, inputFirstName, inputLastName, scrollGender, scrollSubmit, selectContinent, uploadTestFile}
+import pages.PractiseFormPage.{browserLaunch, clickCookies, clickSubmit, driver, experience, gender, inputDate, inputFirstName, inputLastName, scrollGender, scrollSubmit, selectContinent, uploadTestFile}
 import testdata.PractiseData.{continentText, fileUploadTestData, firstnameText, lastnameText}
+import utils.ScreenCapture
 
 class PractiseFormSteps extends ScalaDsl with EN {
 
@@ -15,7 +16,7 @@ class PractiseFormSteps extends ScalaDsl with EN {
     inputFirstName(firstnameText)
     inputLastName(lastnameText)
     inputDate("12 June 2025")
-
+ScreenCapture.capture(driver)
   }
   And("""the user clicks radio button and checkbox""") { () =>
     scrollGender()
@@ -36,7 +37,7 @@ uploadTestFile(fileUploadTestData)
   And("""the user clicks submit button""") { () =>
     scrollSubmit()
     clickSubmit()
-
+ScreenCapture.capture(driver)
   }
 
   Then("""forms should be submitted""") { () =>
