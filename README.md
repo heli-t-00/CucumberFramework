@@ -1,4 +1,6 @@
-# CucumberCurriculum
+# CucumberFramework
+
+#HT WK6D4 MPV pmTask added - PractiseForm features created - CHECK THIS OUT
 
 # Scala Selenium Cucumber BDD Framework
 
@@ -16,7 +18,7 @@ It supports BDD-style testing for web applications.
 
 # Clone the repository:
 # ```bash
-git clone git@github.com:MercatorDigitalAcademy/CucumberCurriculum.git
+git clone git@github.com:MercatorDigitalAcademy/CucumberFramework.git
 cd CucumberCurriculum.
 
 ### How to run the test
