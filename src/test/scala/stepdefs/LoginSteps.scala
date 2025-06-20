@@ -24,4 +24,7 @@ class LoginSteps extends ScalaDsl with EN  {
   Then("""the user should be redirected to the Dashboard""") { () =>
     verifyHeader()
   }
+
+
+
 }
